@@ -4,12 +4,12 @@ const text = `You're racing to create exceptional work, but traditional design t
 
 export default function Introduction() {
   return (
-    <section className="py-28">
+    <section className="py-28 lg:py-40">
       <div className="container">
         <div className="flex justify-center">
           <Tag>Introducing layers</Tag>
         </div>
-        <div className="text-center text-4xl font-medium mt-10">
+        <div className="text-center text-4xl md:text-6xl lg:text-7xl font-medium mt-10">
           <span>Your creative process should be fast, flexible, and fun.</span>{" "}
           <span className="text-white/50">{text}</span>{" "}
           <span className="text-lime-400 block">
