@@ -6,6 +6,7 @@ import avatar3 from "@/assets/images/avatar-lula-meyers.jpg";
 import avatar4 from "@/assets/images/avatar-owen-garcia.jpg";
 import Image from "next/image";
 import { Avatar } from "@/components/Avatar";
+import { Key } from "@/components/Key";
 
 const features = [
   "Asset Library",
@@ -58,13 +59,25 @@ export default function Features() {
             title="Interactive Prototyping"
             description="Engage your audience with interactive prototypes."
           >
-            <div></div>
+            <div className="aspect-video flex items-center justify-center">
+              <p className="text-center text-4xl font-extrabold text-white/20">
+                We've achieved{" "}
+                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  incredible
+                </span>{" "}
+                growth this year
+              </p>
+            </div>
           </FeatureCard>
           <FeatureCard
             title="Keyboard shortcuts"
             description="Speed up your workflow with keyboard shortcuts."
           >
-            <div></div>
+            <div className="aspect-video flex items-center justify-center gap-4">
+              <Key className="w-28">shift</Key>
+              <Key>alt</Key>
+              <Key>c</Key>
+            </div>
           </FeatureCard>
         </div>
         <div>
