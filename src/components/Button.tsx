@@ -22,8 +22,6 @@ export const Button = (
         variant: props.variant,
         className: props.className,
       })}
-    >
-      {props.children}
-    </button>
+    />
   );
 };
