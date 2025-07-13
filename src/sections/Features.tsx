@@ -5,6 +5,7 @@ import avatar2 from "@/assets/images/avatar-florence-shaw.jpg";
 import avatar3 from "@/assets/images/avatar-lula-meyers.jpg";
 import avatar4 from "@/assets/images/avatar-owen-garcia.jpg";
 import Image from "next/image";
+import { Avatar } from "@/components/Avatar";
 
 const features = [
   "Asset Library",
@@ -31,19 +32,26 @@ export default function Features() {
             title="Real time collaboration"
             description="Work together with your team in real time. Share your designs with your team and get feedback in real time."
           >
-            <div>
-              <div>
-                <Image src={avatar1} alt="Avatar 1" />
-              </div>
-              <div>
-                <Image src={avatar2} alt="Avatar 2" />
-              </div>
-              <div>
-                <Image src={avatar3} alt="Avatar 3" />
-              </div>
-              <div>
-                <Image src={avatar4} alt="Avatar 4" />
-              </div>
+            <div className="aspect-video flex items-center justify-center">
+              <Avatar className="z-40">
+                <Image src={avatar1} alt="Avatar 1" className="rounded-full" />
+              </Avatar>
+              <Avatar className="-ml-6 border-indigo-500 z-30">
+                <Image src={avatar2} alt="Avatar 2" className="rounded-full" />
+              </Avatar>
+              <Avatar className="-ml-6 border-amber-500 z-20">
+                <Image src={avatar3} alt="Avatar 3" className="rounded-full" />
+              </Avatar>
+              <Avatar className="-ml-6 border-transparent">
+                <div className="size-full bg-neutral-700 rounded-full flex items-center justify-center gap-1">
+                  {Array.from({ length: 3 }).map((_, index) => (
+                    <div
+                      key={index}
+                      className="size-1.5 bg-white rounded-full"
+                    />
+                  ))}
+                </div>
+              </Avatar>
             </div>
           </FeatureCard>
           <FeatureCard
