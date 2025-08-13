@@ -87,12 +87,18 @@ export default function Features() {
           <FeatureCard
             title="Keyboard shortcuts"
             description="Speed up your workflow with keyboard shortcuts."
-            className="md:col-span-2 md:col-start-2 lg:col-span-1 lg:col-start-auto"
+            className="md:col-span-2 md:col-start-2 lg:col-span-1 lg:col-start-auto group"
           >
             <div className="aspect-video flex items-center justify-center gap-4">
-              <Key className="w-28">shift</Key>
-              <Key>alt</Key>
-              <Key>c</Key>
+              <Key className="w-28 group-hover:outline outline-transparent outline-2 outline-offset-4 group-hover:outline-lime-400 translate-y-1 transition-all">
+                shift
+              </Key>
+              <Key className="group-hover:outline outline-transparent outline-2 outline-offset-4 group-hover:outline-lime-400 translate-y-1 transition-all">
+                alt
+              </Key>
+              <Key className="group-hover:outline outline-transparent outline-2 outline-offset-4 group-hover:outline-lime-400 translate-y-1 transition-all">
+                c
+              </Key>
             </div>
           </FeatureCard>
         </div>
