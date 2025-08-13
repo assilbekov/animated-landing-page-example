@@ -32,7 +32,7 @@ export default function Features() {
           <FeatureCard
             title="Real time collaboration"
             description="Work together with your team in real time. Share your designs with your team and get feedback in real time."
-            className="md:col-span-2 lg:col-span-1"
+            className="md:col-span-2 lg:col-span-1 group"
           >
             <div className="aspect-video flex items-center justify-center">
               <Avatar className="z-40">
@@ -44,8 +44,13 @@ export default function Features() {
               <Avatar className="-ml-6 border-amber-500 z-20">
                 <Image src={avatar3} alt="Avatar 3" className="rounded-full" />
               </Avatar>
-              <Avatar className="-ml-6 border-transparent">
-                <div className="size-full bg-neutral-700 rounded-full flex items-center justify-center gap-1">
+              <Avatar className="-ml-6 border-transparent group-hover:border-green-500 transition-colors">
+                <div className="size-full bg-neutral-700 rounded-full flex items-center justify-center gap-1 relative">
+                  <Image
+                    src={avatar4}
+                    alt="Avatar 4"
+                    className="absolute size-full rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                  />
                   {Array.from({ length: 3 }).map((_, index) => (
                     <div
                       key={index}
