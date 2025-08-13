@@ -67,7 +67,7 @@ export default function Features() {
             className="md:col-span-2 lg:col-span-1 group"
           >
             <div className="aspect-video flex items-center justify-center">
-              <p className="text-center text-4xl font-extrabold text-white/20 group-hover:text-white/10 transition-colors">
+              <p className="text-center text-4xl font-extrabold text-white/20 group-hover:text-white/10 transition-colors duration-500">
                 We've achieved{" "}
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent relative">
                   <span>incredible</span>
@@ -77,7 +77,7 @@ export default function Features() {
                     loop
                     muted
                     playsInline
-                    className="absolute bottom-full left-1/2 -translate-x-1/2 rounded-2xl shadow-xl opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity"
+                    className="absolute bottom-full left-1/2 -translate-x-1/2 rounded-2xl shadow-xl opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-500"
                   />
                 </span>{" "}
                 growth this year
