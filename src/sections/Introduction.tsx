@@ -1,10 +1,12 @@
 "use client";
 
 import { Tag } from "@/components/Tag";
-import { useScroll } from "framer-motion";
-import { useRef } from "react";
+import { useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { twMerge } from "tailwind-merge";
 
 const text = `You're racing to create exceptional work, but traditional design tools slow you down with unnecessary complexity and steep learning curves.`;
+const words = text.split(" ");
 
 export default function Introduction() {
   const scrollTarget = useRef(null);
@@ -12,6 +14,17 @@ export default function Introduction() {
     target: scrollTarget,
     offset: ["start end", "end end"],
   });
+  const [currentWord, setCurrentWord] = useState(0);
+  const wordIndex = useTransform(scrollYProgress, [0, 1], [0, words.length]);
+
+  useEffect(() => {
+    wordIndex.on("change", (value) => {
+      setCurrentWord(value);
+    });
+    /* return () => {
+      wordIndex.stop();
+    }; */
+  }, [wordIndex]);
 
   return (
     <section className="py-28 lg:py-40">
@@ -24,7 +37,17 @@ export default function Introduction() {
             <span>
               Your creative process should be fast, flexible, and fun.
             </span>{" "}
-            <span className="text-white/50">{text}</span>{" "}
+            <span className="text-white/50">
+              {words.map((word, index) => (
+                <span
+                  key={index}
+                  className={twMerge(
+                    "transition duration-500",
+                    currentWord > index && "text-white"
+                  )}
+                >{`${word} `}</span>
+              ))}
+            </span>{" "}
             <span className="text-lime-400 block">
               That&apos;s why we built layers.
             </span>
