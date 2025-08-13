@@ -9,13 +9,16 @@ import { Fragment } from "react";
 export const IntegrationsColumn = ({
   integrations,
   className,
+  reverse = false,
 }: {
   className?: string;
   integrations: IntegrationsType;
+  reverse?: boolean;
 }) => {
   return (
     <motion.div
-      animate={{ y: "-50%" }}
+      initial={{ y: reverse ? "-50%" : 0 }}
+      animate={{ y: reverse ? 0 : "-50%" }}
       transition={{
         duration: 20,
         ease: "linear",
