@@ -21,15 +21,12 @@ export default function Introduction() {
     wordIndex.on("change", (value) => {
       setCurrentWord(value);
     });
-    /* return () => {
-      wordIndex.stop();
-    }; */
   }, [wordIndex]);
 
   return (
     <section className="py-28 lg:py-40">
       <div className="container">
-        <div className="sticky top-20">
+        <div className="sticky top-20 md:top-28 lg:top-32">
           <div className="flex justify-center">
             <Tag>Introducing layers</Tag>
           </div>
